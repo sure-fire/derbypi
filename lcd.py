@@ -47,7 +47,10 @@ def setTitle(string):
 	output()
 
 def setContent(string):
-	currentText[1] = " " + string
+	if len(string)<=15:
+		currentText[1] = " " + string
+	else:
+		currentText[1] = " " + string[:14] + ">"
 	output()
 
 def showError(string,redraw=True):
@@ -80,9 +83,10 @@ def off():
 def clear(color=None):
 	# Wipes the screen and resets the color, but doesn't touch currentText
 	global currentColor
-	charlcd.clear()
 
+	charlcd.clear()
 	charlcd.home()
+
 	if color:
 		setColor(color)
 	elif currentColor:

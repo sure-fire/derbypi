@@ -39,7 +39,7 @@ def module_run(path):
 		path = "./modules/" + name + "/main.py"
 		
 	try:
-		log("LOADING MODULE: " + name + "(" + path + ")")
+		log("LOADING MODULE: " + name + " (" + path + ")")
 		module = imp.load_source(name, path)
 		module.init()
 	except:

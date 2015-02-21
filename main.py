@@ -6,11 +6,12 @@
 import core
 import lcd
 import sys
+import time
 
 while True:
 	try:
 		lcd.clear()
-		lcd.showMessage("   DerbyPi 2.0",length=0,color=lcd.GREEN)
+		lcd.showMessage("   DerbyPi 2.0",length=1,color=lcd.GREEN)
 		menuList = core.module_scan(".")
 		
 		lcd.menu("MAIN MENU",menuList)
@@ -31,10 +32,9 @@ while True:
 		sys.exit(0)
 	
 	# BLOCK COMMENT THE FOLLOWING LINES TO FORCE CRASHES!
-'''	# UNHANDLED EXCEPTIONS?  WHO WROTE THIS THING ANYWAY?
+	# UNHANDLED EXCEPTIONS?  WHO WROTE THIS THING ANYWAY?
 	except:
 		core.log("UNHANDLED FATAL ERROR")
 		err = sys.exc_info()[0]
 		err = str(err).split("'")[1]
 		core.log(err[11:])
-'''
