@@ -5,6 +5,7 @@ The DerbyPi is a Python-based, RasPi thumbdrive wiper running under Raspian Linu
 Current modules include:
   - **Wipe**: Zeroize a USB device with a one-pass wipe
   - **Clone**: Duplicate one USB device to another via a byte-for-byte copy
+  - **Link Tester**: Continually brings the eth0 interface up and down rythmically to help identify a port on a switch
   - **Settings**: See your IP address, Enable/disable SSH, Reset the 'pi' user's password, and initiate an adhoc WiFi access point
   - **Shutdown**: Power off the RasPi politely
 
